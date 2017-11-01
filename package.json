@@ -8,7 +8,12 @@
         "vscode": "^1.17.0"
     },
     "categories": [
-        "Other"
+        "Languages",
+        "Linters"
+    ],
+    "keywords": [
+        "lua",
+        "auto-complete"
     ],
     "activationEvents": [
         "onCommand:extension.sayHello"
