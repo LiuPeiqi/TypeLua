@@ -20,6 +20,18 @@
     ],
     "main": "./extension",
     "contributes": {
+        "languages": [
+            {
+                "id": "lua"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "lua",
+                "scopeName": ".lua",
+                "path": "./syntaxes/lua.tmLanguage"
+            }
+        ],
         "commands": [{
             "command": "extension.sayHello",
             "title": "Hello World"
