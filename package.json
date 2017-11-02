@@ -1,5 +1,5 @@
 {
-    "name": "TypeLua",
+    "name": "typelua",
     "displayName": "TypeLua",
     "description": "Lua code auto-completion",
     "version": "0.0.1",
@@ -9,44 +9,25 @@
     },
     "categories": [
         "Languages",
-        "Linters"
+        "Snippets"
     ],
-    "keywords": [
-        "lua",
-        "auto-complete"
-    ],
-    "activationEvents": [
-        "onCommand:extension.sayHello"
-    ],
-    "main": "./extension",
     "contributes": {
-        "languages": [
-            {
-                "id": "lua"
-            }
-        ],
-        "grammars": [
+        "languages": [{
+            "id": "lua",
+            "aliases": ["Lua", "lua"],
+            "extensions": [".lua"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "lua",
+            "scopeName": "source.lua",
+            "path": "./syntaxes/lua.tmLanguage.json"
+        }],
+        "snippets": [
             {
                 "language": "lua",
-                "scopeName": ".lua",
-                "path": "./syntaxes/lua.tmLanguage"
+                "path": "./snippets/snippets.json"
             }
-        ],
-        "commands": [{
-            "command": "extension.sayHello",
-            "title": "Hello World"
-        }]
-    },
-    "scripts": {
-        "postinstall": "node ./node_modules/vscode/bin/install",
-        "test": "node ./node_modules/vscode/bin/test"
-    },
-    "devDependencies": {
-        "typescript": "^2.5.2",
-        "vscode": "^1.1.5",
-        "mocha": "^3.5.0",
-        "eslint": "^4.6.1",
-        "@types/node": "^7.0.0",
-        "@types/mocha": "^2.2.42"
+        ]
     }
 }

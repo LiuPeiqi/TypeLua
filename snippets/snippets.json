@@ -1,0 +1,18 @@
+{
+    "fun": {
+        "body": "function ${1:function_name}( ${2:...} )\n\t${0:-- body}\nend",
+        "description": "function",
+        "prefix": "fun",
+        "scope": "source.lua"
+    },
+    "function": {
+        "body": "function ${1:function_name}( ${2:...} )\n\t${0:-- body}\nend",
+        "description": "function",
+        "prefix": "function",
+        "scope": "source.lua"
+    },
+    "key: \"value\" (Hash Pair)": {
+        "prefix": "key",
+        "body": "${1:key}: ${2:\"${3:value}\"}"
+    }
+}
